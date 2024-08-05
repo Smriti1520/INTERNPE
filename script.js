@@ -1,20 +1,17 @@
-// Todo: Make M+ M- and MC functional
-let string = "";
-let buttons = document.querySelectorAll('.button');
-Array.from(buttons).forEach((button)=>{
-  button.addEventListener('click', (e)=>{
-    if(e.target.innerHTML == '='){
-      string = eval(string);
-      document.querySelector('input').value = string;
-    }
-    else if(e.target.innerHTML == 'C'){
-      string = ""
-      document.querySelector('input').value = string;
-    }
-    else{ 
-    console.log(e.target)
-    string = string + e.target.innerHTML;
-    document.querySelector('input').value = string;
-      }
-  })
-})
+const bar= document.getElementById('bar');
+const close= document.getElementById('close');
+const nav= document.getElementById('navbar');
+
+if (bar) {
+    bar.addEventListener('click',() => {
+        nav.classList.add('active');
+    })
+}
+
+if (close) {
+    close.addEventListener('click',() => {
+        nav.classList.remove('active');
+    })
+}
+
+    // Script for navigation bar
